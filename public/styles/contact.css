@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header,
+footer {
+    width: 100%;
+}
+
+main {
+    border-radius: 25px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 50%;
+    width: 40%;
+    background: linear-gradient(to bottom, #ececec, #d7d7d7);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+main:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 4px rgb(121, 121, 121);
+}
+
+#c1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#c1 h1{
+    font-family: 'Lobster', sans-serif;
+    text-shadow: 2px 2px 4px rgba(129, 129, 129, 0.5);
+}
+    
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btns {
+
+    color: #7a7a7a;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    height: 50px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    text-shadow: 2px 2px 4px rgba(129, 129, 129, 0.5);
+    transition: transform 0.2s ease-in;
+}
+
+.btns:hover {
+    color: black;
+    background-color: #b6b6b6;
+    transform: scale(1.06);
+}
+
+textarea {
+    resize: none;
+    /* Prevent resizing */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fele {
+    width: 80%;
+    height: 85%;
+    border-radius: 25px;
+    border: none;
+}

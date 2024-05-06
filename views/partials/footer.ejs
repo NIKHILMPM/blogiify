@@ -1,0 +1,24 @@
+
+<head>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<footer>
+    
+    <div id="foot_1">
+        <ul>
+            <li><i class="fa fa-location-arrow" aria-hidden="true"></i>Mumbai India</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i> 956824984</li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i> nikhilmpm89@gmail.com</li>
+        </ul>
+    </div>
+    <div id="foot_2">
+        <div id="date">
+            <% var currentDate = new Date(); %>
+            <%= currentDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %>
+        </div>
+    </div>
+</footer>

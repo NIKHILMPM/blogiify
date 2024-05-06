@@ -1,0 +1,105 @@
+body {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    flex: 1;
+}
+
+/* .................................header....................................... */
+#navbar {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    border-bottom: solid black 2px;
+}
+
+.nav_right,
+.nav_left {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    gap: 10px;
+}
+
+.nav_right {
+    margin-right: 2%;
+}
+
+.nav_left {
+    margin-left: 1%;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    /* Remove margin for now */
+}
+
+#navbar img {
+    width: 30px;
+    padding: 5px;
+}
+
+.headBtn {
+    transform: transition ease in 0.3;
+}
+
+.headBtn:hover {
+    background-color: rgb(200, 200, 200);
+    transform: transition ease out 0.3;
+}
+
+/* ..............................................footer................................... */
+footer {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #ececec, #d7d7d7);
+    /* Center vertically */
+    justify-content: space-between;
+}
+
+#foot_1 {
+    display: flex;
+    align-items: end;
+    height: 100%;
+
+}
+
+#foot_1 ul {
+    padding: 0;
+    margin: 0;
+}
+
+#foot_1 li {
+    list-style: none;
+    padding: 4px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#foot_2 {
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+
+#date {
+    padding: 4px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* color: white;
+font-family: 'Times New Roman', Times, serif;
+text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5); */

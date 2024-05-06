@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/blogPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <% var cat=locals._TechCON[_id].category; %>
+
+    <main>
+        <div id="divin">
+                <div class="up">
+                    <h1>
+                        <%= locals._TechCON[_id].title %>
+                    </h1>
+                    <p>
+                        <%= locals._TechCON[_id].content %>
+                    </p>
+                    <h4>
+                        <%= locals._TechCON[_id].author %>
+                    </h4>
+
+                </div>
+                <div class="dp">
+                    <form action="/delete" method="post">
+                        <input type="hidden" name="id" value='<%= _id %>'>
+                        <input type="hidden" name="category" value='<%= cat %>'>
+                        <input type="hidden" name="_TechCON" value='<%= JSON.stringify(_TechCON) %>'>
+                        <input class="btns" type="submit" value="Delete">
+                    </form>
+                    <button class="btns" onclick="window.location.href='/category'">Go Back</button>
+                </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var cat = '<%=cat%>';
+        // alert(cat);
+
+        if (cat == "technology") {
+            $("body").addClass("tech")
+        } else if (cat == "travel") {
+            $("body").addClass("travel")
+        } else if (cat == "food") {
+            $("body").addClass("food")
+        }
+    </script>
+
+
+</body>
+
+</html>

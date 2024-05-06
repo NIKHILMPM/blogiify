@@ -1,0 +1,153 @@
+body{
+    height: 200vh;
+}
+
+/* ...........................................................................home.page.............................................................. */
+
+#homeFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+#HF_1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 500px;
+    background: url("/images/srcbck.gif") no-repeat;
+    background-size: 100% auto;
+
+}
+
+.hf1 {
+    /* height: 60px; */
+    display: flex;
+    justify-content: center;
+}
+
+#searchBar {
+    margin-top: 2%;
+    width: 60%;
+}
+
+#searchBtn {
+    display: flex;
+    align-items: center;
+    border: solid rgb(123, 123, 123) 2px;
+    border-radius: 25px;
+    /* Set border-radius to give rounded corners */
+    overflow: hidden;
+}
+
+#q,
+#b {
+    margin: 0;
+    height: 25px;
+}
+
+#q {
+    width: 100%;
+    border: none;
+    /* Remove border from input */
+    padding: 0 10px;
+    /* Add padding for input */
+}
+
+#b {
+    margin: 0;
+    background-color: #007bff;
+    /* Example button background color */
+    color: white;
+    /* Example button text color */
+    border: none;
+    padding: 0 15px;
+    /* Add padding for button */
+    cursor: pointer;
+}
+
+.hf_2 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.hf_2>img {
+    height: 150px;
+    padding-bottom: 2%;
+}
+
+.hh1 {
+    text-align: center;
+    color: rgb(235, 235, 235);
+}
+
+/* ............................................bottom section............................................................. */
+
+.HF_2 {
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 80%;
+    height: 600px;
+    background: linear-gradient(to bottom, #ececec, #d7d7d7);
+    z-index: -1;
+
+}
+
+#Bhead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0%; */
+    grid-column: span 3;
+}
+
+#Bhead h1 {
+    font-size: 50px;
+}
+
+.BBox {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.tcb1,
+.trb1,
+.fb1 {
+    grid-area: 1/1/2/2;
+    grid-column: span 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* Ensure the image fits perfectly within the container */
+    background-position: center;
+    /* Center the background image */
+    height: 100%;
+    width: 100%;
+}
+
+.tcb1 {
+    background-image: url("/images/tech.gif");
+}
+
+.trb1 {
+    background-image: url("/images/travel.gif");
+}
+
+.fb1 {
+    background-image: url("/images/food.gif");
+}
+
+.jcb {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+}
+
+.tcb2,
+.trb2,
+.fb2 {
+    grid-area: 2/1/3/2;
+    display: flex;
+    flex-direction: column;
+}

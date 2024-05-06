@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <%-include("partials/header.ejs") %>
+    <main>
+            <!-- ................header................. -->
+        <div id="homeFlex">
+            <div id="HF_1">
+                <div class="hf1">
+                    <form id="searchBar" action="/blogPage" method="get">
+                        <div id="searchBtn">
+                            <input id="q" type="search" name="author" placeholder="search by author name">
+                            <input type="hidden" name="src_id" value="src">
+                            <input id="b" type="submit" value="search">
+                        </div>
+                    </form>      
+                </div>
+                <div class="hf_2">
+                    <img src="/images/logog.png" alt="">
+                    <!-- <h1 class="qu">"Where Ideas Unite: Explore, Learn, and Share at Bogiiify!"</h1> -->
+                </div>
+                <div class="hf3">
+                    <h1 class="hh1">"Capture moments, tell stories, share experiences"</h1>
+                    <h3 class="hh1">--Blogging is the art of weaving life into captivating narratives.</h3>
+                </div>
+            </div>
+
+
+            <div class="HF_2">
+                <div id="Bhead">
+                    <h1 style="color: white; font-family: 'Times New Roman', Times, serif; text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.5);">
+                        "Top trending blogs"
+                    </h1>
+                </div>
+      
+                <div class="BBox">
+                    <div class="tcb1">
+
+                    </div>
+                    <div class="tcb2">
+                        <% if(locals.T_contento){ %>
+                            <h2 class="jcb">
+                                <%= T_contento.title %>
+                            </h2>
+                            <h3 class="jcb">by "<%= T_contento.author %>"</h3>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="BBox">
+                    <div class="trb1">
+
+                    </div>
+                    <div class="trb2">
+                        <% if(locals.Tr_contento){ %>
+                            <h2 class="jcb">
+                                <%= Tr_contento.title %>
+                            </h2>
+                            <h3 class="jcb">"by <%= Tr_contento.author %>"</h3>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="BBox">
+                    <div class="fb1"></div>
+                    <div class="fb2">
+                        <% if(locals.F_contento){ %>
+                            <h2 class="jcb">
+                                <%= F_contento.title %>
+                            </h2>
+                            <h3 class="jcb">by "<%= F_contento.author %>"</h3>
+                            <% } %>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <%-include("partials/footer.ejs") %>
+
+</body>
+
+</html>

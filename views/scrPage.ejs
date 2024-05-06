@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/src.css">
+</head>
+
+<body>
+    <%- include("partials/header.ejs") %>
+        <!-- _Tech: tech,
+    _Travel: travel,
+    _Food: Food,
+    _Tcid: ttt,
+    _Trid: trr,
+    _Fid: fff, -->
+        <main>
+            <div class="srctitle ">
+                <h1>Blogs written by <%= author_name.toUpperCase(); %>
+                </h1>
+                <% var idd=author_name.replace(/\s/g,"").toLowerCase() %>
+            </div>
+            <div class="srctech box">
+                <div class="one">
+                    <% if(_Tcid!==false){ %>
+                        <h1>Technology</h1>
+                </div>
+                <div class="two">
+                    <ul>
+                        <% for(var i=0;i<_Tech.length;i++){ %>
+                            <% if(_Tech[i].authorid===idd){ %>
+                                <li>
+                                    <h5 class="h5">
+                                        <a href="/blogPage?category=technology&id=<%= i %>">
+                                            <%= _Tech[i].title %> by "<%= _Tech[i].author %>"
+                                        </a>
+                                    </h5>
+                                </li>
+                                <% } %>
+                                    <% } %>
+                    </ul>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="srctravel box">
+                <div class="one">
+                    <% if(_Trid!==false){ %>
+                        <h1>Travel</h1>
+                </div>
+                <div class="two">
+                    <ul>
+                        <% for(var i=0;i<_Travel.length;i++){ %>
+                            <% if(_Travel[i].authorid===idd){ %>
+                                <li>
+                                    <h5 class="h5">
+                                        <a href="/blogPage?category=travel&id=<%= i %>">
+                                            <%= _Travel[i].title %> by "<%= _Travel[i].author %>"
+                                        </a>
+                                    </h5>
+                                </li>
+                                <% } %>
+                                    <% } %>
+                    </ul>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="srcfood box">
+                <div class="one">
+                    <% if(_Fid!==false){ %>
+                        <h1>Food</h1>
+                </div>
+                <div class="two">
+                    <ul>
+                        <% for(var i=0;i<_Food.length;i++){ %>
+                            <% if(_Food[i].authorid===idd){ %>
+                                <li>
+                                    <h5 class="h5">
+                                        <a href="/blogPage?category=food&id=<%= i %>">
+                                            <%=_Food[i].title %> by "<%=_Food[i].author %>"
+                                        </a>
+                                    </h5>
+                                </li>
+                                <% } %>
+                                    <% } %>
+                    </ul>
+                    <% } %>
+                </div>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+
+                $(document).ready(function () {
+                    $(".srctech").on("mouseover", function () {
+                        $("body").addClass("tech").removeClass("travel food")
+                    });
+
+                    $(".srctravel").on("mouseover", function () {
+                        $("body").addClass("travel").removeClass("tech food");
+                    });
+
+                    $(".srcfood").on("mouseover", function () {
+                        $("body").addClass("food").removeClass("travel tech");
+                    });
+                });
+            </script>
+
+        </main>
+
+</body>
+
+</html>

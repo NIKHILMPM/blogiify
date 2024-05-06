@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Blog</title>
+    <link rel="stylesheet" href="/styles/blog.css">
+
+</head>
+
+<body>
+    <%-include("partials/header.ejs") %>
+    <main>
+        <div id="one">
+            <h1>"Craft your thoughts, share your stories. Begin blogging today."</h1>
+        </div>
+        <div id="two">
+            <form class="formed" action="/submit-blog" method="post">
+                <div id="twoin">
+                    <!-- <label for="category">Category:</label> -->
+                    <div class="g1_1 topg">                       
+                        <select class="fele" name="category" id="" placeholder="Category" required>
+                            <option value="technology">Technology</option>
+                            <option value="travel">Travel</option>
+                            <option value="food">Food</option>
+                        </select>
+                    </div>
+                    <div class="g1 topg">
+                        <input class="fele" type="text" name="title" placeholder="your Blog's Title" required>
+                    </div>
+                    <div class="g3 topg">
+                        <input class="fele" type="text" name="author" placeholder="Your Name Mr Author" required>
+                    </div>
+                    <div class="g2 topg">
+                        <textarea class="fele txt" name="content" placeholder="your Blog's content goes over here"  id="" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="g4 ">
+                        <input class="btns" type="submit" value="Submit ">
+                        <div class="btns" id="go">Go Home</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <%-include("partials/footer.ejs") %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $("#go").on("click", function () {
+            var confirmation = confirm("Are you sure you want to leave? Your data will be lost.");
+            if (confirmation) {
+                window.location.href = "/";
+            }
+            return false; // Prevent default behavior of the anchor tag
+        });
+    
+        $("#navHomee").on("click", function () {
+            var confirmation = confirm("Are you sure you want to leave? Your data will be lost.");
+            if (confirmation) {
+                window.location.href = "/";
+            }
+            return false; // Prevent default behavior of the anchor tag
+        });
+    
+        $("#navBlog").on("click", function () {
+            var confirmation = confirm("Are you sure you want to leave? Your data will be lost.");
+            if (confirmation) {
+                window.location.href = "/blog";
+            }
+            return false; // Prevent default behavior of the anchor tag
+        });
+    
+        $("#navCat").on("click", function () {
+            var confirmation = confirm("Are you sure you want to leave? Your data will be lost.");
+            if (confirmation) {
+                window.location.href = "/category";
+            }
+            return false; // Prevent default behavior of the anchor tag
+        });
+    
+        $("#navCon").on("click", function () {
+            var confirmation = confirm("Are you sure you want to leave? Your data will be lost.");
+            if (confirmation) {
+                window.location.href = "/contact";
+            }
+            return false; // Prevent default behavior of the anchor tag
+        });
+    </script>
+    
+</body>
+
+</html>
